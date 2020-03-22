@@ -62,8 +62,20 @@ router.get('/filter-resources', (req, res) => {
                 "recommendation": text
             }})}
 
-    let searchResults = {}
-    client.search({ index, body: searchQuery }).then(x => searchResults = x)
+    client.search({ index: elasticsearchIndex, body: searchQuery })
+        .then(searchResults => {
+            const hits = searchResults.body.hits.hits.map(hit => {
+                return {
+                    id: hit['_id'],
+                    score: hit['_score'],
+                    values: hit['_source']
+                }
+            });
+            res.setHeader('Content-Type', 'application/json');
+            res.json(hits);
+        }).catch((err) => {
+            res.status(503).send('Failed to query Elasticsearch');
+        });
 
 
 });
