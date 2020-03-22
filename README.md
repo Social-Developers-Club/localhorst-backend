@@ -1,4 +1,6 @@
-# Debug
+# Localhorst Backend
+
+## Development
 
 1. Start a local Elasticsearch instance:
    ```bash
@@ -18,3 +20,10 @@
    npm install
    DEBUG=localhorst:* npm start
    ```
+
+## Build
+
+```bash
+docker build -t supportforlocalhorst/localhorst-backend .
+docker push supportforlocalhorst/localhorst-backend
+```
