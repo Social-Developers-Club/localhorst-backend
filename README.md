@@ -1,5 +1,7 @@
 # Localhorst Backend
 
+![](horst.png)
+
 ## About
 
 This repository contains the source code for the backend application of _Support for Localho(r)st_.
