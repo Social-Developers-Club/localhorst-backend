@@ -79,7 +79,7 @@ docker push supportforlocalhorst/localhorst-backend
   docker-compose up
   ```
 
-  The frontend application can be access at [http://localhost:8081](http://localhost:8081). The backend runs on [http://localhost:8080](http://localhost:8080).
+  The frontend application can be access at [http://localhost:8081](http://localhost:8081). The backend runs on [http://localhost:8080](http://localhost:8080). Please note, that the frontend application was implemented to run on our remote server. Therefore, it connects per default to a backend running on our server at [http://sfl-backend.philenius.de](http://sfl-backend.philenius.de). If you want to start backend and frontend locally, then you need to adapt the code of the frontend so that it connects to your locally running backend. See the instructions at [localhorst-frontend](https://github.com/Social-Developers-Club/localhorst-frontend) for further details. This adaption requires a rebuild of the frontend application.
 
 :warning: Due to crappy design, this backend application seeds Elasticsearch 30 seconds after starting the application. Until this seed, the API won't return any results.
 
