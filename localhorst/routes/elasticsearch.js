@@ -86,6 +86,7 @@ router.get('/', (req, res) => {
             res.setHeader('Content-Type', 'application/json');
             res.json(hits);
         }).catch((err) => {
+            console.error('Failed to query Elasticsearch', JSON.stringify(err));
             res.status(503).send('Failed to query Elasticsearch');
         });
 

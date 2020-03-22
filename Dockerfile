@@ -8,7 +8,7 @@ FROM node:13-slim
 
 ENV PORT=8080 \
     NODE_ENV=production \
-    ELASTICSEARCH_NODE=http://localhorst-elasticsearch:9200 \
+    ELASTICSEARCH_NODE="http://localhorst-elasticsearch:9200" \
     ELASTICSEARCH_INDEX="recommendations"
 
 WORKDIR /app

@@ -48,7 +48,7 @@ module.exports.seedElasticsearch = function() {
     index: elasticsearchIndex,
   }).catch((err) => {
     if (err.meta.statusCode !== 404) {
-      console.error('failed to delete index', elasticsearchIndex, err);
+      console.error('failed to delete index', elasticsearchIndex, JSON.stringify(err));
       return false;
     }
   }).then(() => {
@@ -69,7 +69,7 @@ module.exports.seedElasticsearch = function() {
         }
       }
     }).catch((err) => {
-      console.error('failed to create index', elasticsearchIndex, err);
+      console.error('failed to create index', elasticsearchIndex, JSON.stringify(err));
       return false;
     }).then(() => {
 
@@ -89,7 +89,7 @@ module.exports.seedElasticsearch = function() {
         index: elasticsearchIndex,
         body: bulkRequests
       }).catch((err) => {
-        console.error('failed to index documents through bulk request', err);
+        console.error('failed to index documents through bulk request', JSON.stringify(err));
         return false;
       }).then(() => {
         console.log('successfully indexed all documents through bulk request');
