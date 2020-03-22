@@ -1,9 +1,11 @@
-'use strict'
+'use strict';
 
-const { Client } = require('@elastic/elasticsearch')
-const client = new Client({ node: 'http://localhost:9200' })
+const { Client } = require('@elastic/elasticsearch');
 
-const INDEX = 'recommendations';
+const elasticsearchNode = process.env.ELASTICSEARCH_NODE || 'http://localhost:9200';
+const index = process.env.ELASTICSEARCH_INDEX || 'recommendations';
+const client = new Client({ node: elasticsearchNode });
+
 const documentsToInsert = [
   {
     'category': 'finances',
@@ -15,17 +17,17 @@ const documentsToInsert = [
 ]
 
 client.indices.delete({
-  index: INDEX,
+  index: index,
 }).catch((err) => {
   if (err.meta.statusCode !== 404) {
-    console.error('failed to delete index', INDEX, err);
+    console.error('failed to delete index', index, err);
   }
 }).then(() => {
 
   console.log('successfully deleted index');
 
   client.indices.create({
-    index: INDEX,
+    index: index,
     body: {
       "mappings": {
         "properties": {
@@ -38,14 +40,14 @@ client.indices.delete({
       }
     }
   }).catch((err) => {
-    console.error('failed to create index', INDEX, err);
+    console.error('failed to create index', index, err);
   }).then(() => {
 
     console.log('successfully created index');
 
     documentsToInsert.forEach(doc => {
       client.index({
-        index: INDEX,
+        index: index,
         body: doc
       }).catch((err) => {
         console.error('failed to insert document', doc, err);
