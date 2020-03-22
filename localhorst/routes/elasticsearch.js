@@ -67,7 +67,7 @@ router.get('/', (req, res) => {
         if (text) {
             searchQuery.query.bool.must.push({
                 "match": {
-                    "recommendation": text
+                    "description": text
                 }
             })
         }
