@@ -82,3 +82,8 @@ docker push supportforlocalhorst/localhorst-backend
   The frontend application can be access at [http://localhost:8081](http://localhost:8081). The backend runs on [http://localhost:8080](http://localhost:8080).
 
 :warning: Due to crappy design, this backend application seeds Elasticsearch 30 seconds after starting the application. Until this seed, the API won't return any results.
+
+## Related Repositories
+
+- [localhorst-frontend](https://github.com/Social-Developers-Club/localhorst-frontend)
+- [localhorst-chatbot-backend](https://github.com/Social-Developers-Club/localhorst-chatbot-backend)
