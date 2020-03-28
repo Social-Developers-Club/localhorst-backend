@@ -1,0 +1,263 @@
+[
+    {
+        "category": [
+            "financial"
+        ],
+        "description": "Solo-Selbstständige haben einen Recht auf ALG 2.",
+        "imageUrl": "https://selbststaendige.verdi.de/++file++5e7236aa72b2335f1fea814b/download/coronavirus_FAQ-grau.jpg",
+        "industry": [
+            "freelancer"
+        ],
+        "link": "https://selbststaendige.verdi.de/beratung/corona-infopool/++co++aa8e1eea-6896-11ea-bfc7-001a4a160100",
+        "title": "Mögliche Entschädigung",
+        "type": "info"
+    },
+    {
+        "category": [
+            "financial"
+        ],
+        "description": "Gastronomen haben ein Recht auf Entschädigung, wenn eine amtlich angeordnete Quarantäne vorliegt. Absatz 12 §56 ff fällt meistens unter Unternehmensrisiko.",
+        "imageUrl": "https://images.unsplash.com/photo-1583324113626-70df0f4deaab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "industry": [
+            "restaurants"
+        ],
+        "link": "https://www.gesetze-im-internet.de/ifsg/IfSG.pdf",
+        "title": "Mögliche Entschädigung",
+        "type": "info"
+    },
+    {
+        "category": [
+            "financial"
+        ],
+        "description": "Als Unternehmen, Selbstständiger oder Freiberufler sind Sie durch die Corona-Krise in finanzielle Schieflage geraten und benötigen einen Kredit?",
+        "imageUrl": "https://www.kfw.de/Presse-Newsroom/Aktuelles/News/Bilder-f%C3%BCr-News/header-corona-finanzhilfe_Responsive_1280x320.jpg",
+        "industry": [
+            "retail",
+            "service",
+            "restaurants",
+            "culture"
+        ],
+        "link": "https://www.kfw.de/KfW-Konzern/Newsroom/Aktuelles/KfW-Corona-Hilfe-Unternehmen.html",
+        "title": "KfW-Corona-Hilfe: Kredite für Unternehmen",
+        "type": "info"
+    },
+    {
+        "category": [
+            "financial"
+        ],
+        "description": "StartNext ist eine Crowdfunding Platform, die während Corona genutzt werden kann, um Kunden eine Möglichkeit zu geben, das eigene geschäft zu unterstützen.",
+        "imageUrl": "https://www.startnext.com/media/thumbnails/ed8/cc7928aa9486385f4e55d08e4c504ed8/122b6345/corona_fonds_headervisual_v1_2x_1584544613.jpg",
+        "industry": [
+            "retail",
+            "service",
+            "restaurants",
+            "culture",
+            "freelancer"
+        ],
+        "link": "https://www.startnext.com/pages/hilfsfonds/campaign/corona-covid-19-shutdown-spenden-amp-crowdfunding-323",
+        "title": "StartNext",
+        "type": "solution"
+    },
+    {
+        "category": [
+            "business"
+        ],
+        "description": "Too Good To Go ist eine App, mit deren Hilfe Betriebe ihr Essen vertreiben können, indem Kunden die Waren selber abholen.",
+        "imageUrl": "https://toogoodtogo.de/images/placeholders/front-page/v2/step-third.png",
+        "industry": [
+            "retail",
+            "restaurants"
+        ],
+        "link": "https://toogoodtogo.de/de",
+        "title": "Too-good-to-go",
+        "type": "solution"
+    },
+    {
+        "category": [
+            "financial"
+        ],
+        "description": "Crowdfunding bezeichnet die Finanzierung von Projekten durch eine große Menge an Privatleuten, die alle mit einem kleinen Beitrag zur Finanzierung beitragen.",
+        "imageUrl": "https://images.unsplash.com/photo-1461088945293-0c17689e48ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "industry": [
+            "retail",
+            "service",
+            "restaurants",
+            "culture",
+            "freelancer"
+        ],
+        "link": "http://crowdfunding-portal.de/plattformen",
+        "title": "Crowdfunding",
+        "type": "solution"
+    },
+    {
+        "category": [
+            "business"
+        ],
+        "description": "Mit Lieferando.de schnell und bequem online Essen anbieten. Lieferando bewirbt auf Twitter eine kontaktlose Lieferung.",
+        "imageUrl": "https://www.lieferando.de/assets/images/header/hero/pizza_light/pizza_light_desktop.jpg",
+        "industry": [
+            "retail",
+            "restaurants"
+        ],
+        "link": "https://twitter.com/lieferando/status/1238522894063415301?s=20",
+        "title": "Lieferando",
+        "type": "solution"
+    },
+    {
+        "category": [
+            "business"
+        ],
+        "description": "Twitch bietet eine Plattform für Millionen von Menschen für Chatting und Video Streaming. Nutzen Sie diese Plattform um beispielsweise Fitnesstrainings online anzubieten.",
+        "imageUrl": "https://images.unsplash.com/photo-1527334919515-b8dee906a34b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "industry": [
+            "culture",
+            "freelancer"
+        ],
+        "link": "https://www.twitch.tv/",
+        "title": "Twitch Live Streaming",
+        "type": "solution"
+    },
+    {
+        "category": [
+            "business"
+        ],
+        "description": "YouTube ist eine amerikanische Online-Plattform für das Teilen von Videos. Registrierte Benutzer können auf YouTube\"s kostenloses Live Streaming Feature nutzen.",
+        "imageUrl": "https://images.unsplash.com/photo-1521989116480-519a01ffeb2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "industry": [
+            "culture",
+            "freelancer"
+        ],
+        "link": "https://www.youtube.com/",
+        "title": "YouTube Live Streaming",
+        "type": "solution"
+    },
+    {
+        "category": [
+            "marketing"
+        ],
+        "description": "Einzelhändler, Gastronom oder Handwerker – eine digitale Präsenz ist für lokale Unternehmen heutzutage von großer Bedeutung. stadtbekannt unterstützt lokale Unternehmen bei ihren Einträgen in digitalen Branchenverzeichnissen, beim Management von Social Media Aktivitäten und dem Umgang mit Kundenbewertungen. So könnt Ihr Eure lokale Auffindbarkeit erfolgreich verbessern.",
+        "imageUrl": "https://www.stadtbekannt.online/wp-content/uploads/2019/03/home-build.png",
+        "industry": [
+            "retail",
+            "service",
+            "restaurants"
+        ],
+        "link": "https://www.stadtbekannt.online/loesungen-fuer-lokale-unternehmen/",
+        "title": "Stadtbekannt",
+        "type": "solution"
+    },
+    {
+        "category": [
+            "marketing",
+            "network"
+        ],
+        "description": "Einkaufshilfe: Biete Nachbarn aus Risikogruppen an, für sie Lebensmittel oder Medikamente zu besorgen. Austausch: Informiere dich über Neuigkeiten und aktuelle Entwicklungen in deinem Vierteil.",
+        "imageUrl": "https://nebenan.de/images/team/vision-desktop.jpg",
+        "industry": [
+            "retail",
+            "service",
+            "restaurants",
+            "culture",
+            "freelancer"
+        ],
+        "link": "https://nebenan.de",
+        "title": "Einkaufshilfe und Austausch auf Nebenan.de",
+        "type": "solution"
+    },
+    {
+        "category": [
+            "marketing"
+        ],
+        "description": "Eine Anleitung zum Social-Media-Marketing für lokale Unternehmen von Neil Patel.",
+        "imageUrl": "https://neilpatel.com/wp-content/uploads/2016/05/locallikes.jpg",
+        "industry": [
+            "retail",
+            "service",
+            "restaurants",
+            "culture"
+        ],
+        "link": "https://neilpatel.com/de/blog/die-ultimative-anleitung-zum-social-media-marketing-fur-lokale-unternehmen/",
+        "title": "Die ultimative Anleitung zum Social-Media-Marketing für lokale Unternehmen",
+        "type": "info"
+    },
+    {
+        "category": [
+            "financial",
+            "network",
+            "operations"
+        ],
+        "description": "Deutscher Industrie- und Handelskammertag: Wo bekomme ich schnell Unterstützung her, wenn ich mein Geschäft vorübergehend schließen oder meine Dienstleistungen einstellen muss? Lohnt sich jetzt noch ein betrieblicher Pandemieplan? Wo bekomme ich aktuelle Infos? Ein Mitarbeiter ist infiziert – was tun? Wie kann mein Unternehmen die Krise überleben? Wie bekomme ich Ersatz für Ausfälle? Was ist mit Soforthilfen, Kurzarbeitergeld, Krediten oder Dienstreisen? Hilfreiche Links und Tipps für Unternehmen haben wir in einer FAQ-Liste zusammengestellt.",
+        "imageUrl": "https://www.dihk.de/resource/image/11908/landscape_ratio4x3/1000/750/d509a0c82c5c6ed6cb585419d73949c2/lw/dihk-aussenansicht.jpg",
+        "industry": [
+            "retail",
+            "service",
+            "restaurants",
+            "culture",
+            "freelancer"
+        ],
+        "link": "https://www.dihk.de/de/aktuelles-und-presse/coronavirus/faq-19594",
+        "title": "FAQ: Fragen und Antworten rund um das Coronavirus",
+        "type": "info"
+    },
+    {
+        "category": [
+            "network"
+        ],
+        "description": "2gather.jetzt stellt eine Plattform bereit, um einen zeitgemäßen Austausch mit Experten und wirtschaftlich Betroffenen zu ermöglichen. Das Zielpublikum stellen kleine Unternehmen und Freiberufler*innen dar.",
+        "imageUrl": "https://2gather.jetzt/wp-content/uploads//2020/03/logo-oink.svg",
+        "industry": [
+            "retail",
+            "freelancer"
+        ],
+        "link": "https://2gather.jetzt/",
+        "title": "Eine Plattform für Zusammenhalt in Krisenzeiten",
+        "type": "info"
+    },
+    {
+        "category": [
+            "network"
+        ],
+        "description": "Eine Facebook Gruppe zur Corona-Soforthilfe von Unternehmern für Unternehmer. In diesen Zeiten hilft jeder jedem ohne auf Profit zu achten. Wer das ebenso sieht ist herzlich Willkommen, alle Anderen erhalten auch Hilfe in dieser Gruppe.",
+        "imageUrl": "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "industry": [
+            "retail",
+            "service",
+            "restaurants",
+            "culture",
+            "freelancer"
+        ],
+        "link": "https://www.facebook.com/groups/3205184109706985/",
+        "title": "Corona-Soforthilfe von Unternehmern für Unternehmer",
+        "type": "info"
+    },
+    {
+        "category": [
+            "business"
+        ],
+        "description": "Deine Kunden vermissen Dein Café, und Du Deine Kunden. Bringe Ihnen also Deine Leidenschaft für Kaffee bei sich zu Hause näher.",
+        "imageUrl": "https://lokaldigital.next-site.de/wp-content/uploads/2020/03/Corkboard-768x1024.jpg",
+        "industry": [
+            "restaurants"
+        ],
+        "link": "https://lokaldigital.next-site.de/?p=1",
+        "title": "Besuche das Wohnzimmer deiner Kunden über das Internet.",
+        "type": "solution"
+    },
+    {
+        "category": [
+            "financial"
+        ],
+        "description": "Die Plattform CoVinanz bietet allen betroffenen Kleinbetrieben die Möglichkeit an, die für Sie passenden finanziellen Unterstützungsmöglichkeiten auf einem Blick zu sehen, die passende Fördermöglichkeit je Bundesland auszuwählen und den Antrag einfach, schnell und benutzerfreundlich direkt über eine digitale Plattform zu stellen.",
+        "imageUrl": "https://images.unsplash.com/photo-1556741533-6e6a62bd8b49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "industry": [
+            "retail",
+            "service",
+            "restaurants",
+            "culture",
+            "freelancer"
+        ],
+        "link": "https://covinanz.herokuapp.com/",
+        "title": "Schnelle finanzielle Hilfe für betroffene Kleingewerbe der Corona-Krise",
+        "type": "info"
+    }
+]

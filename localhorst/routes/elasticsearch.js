@@ -74,6 +74,10 @@ router.get('/', (req, res) => {
 
     }
 
+    // TODO: in case that we'll ever have more than 100 documents in Elasticsearch,
+    // then we should use the scrolling API / pagination.
+    searchQuery.size = 100;
+
     client.search({ index: elasticsearchIndex, body: searchQuery })
         .then(searchResults => {
             const hits = searchResults.body.hits.hits.map(hit => {
