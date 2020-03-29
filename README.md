@@ -8,7 +8,7 @@ This repository contains the source code for the backend application of _Support
 
 _Support for Localho(r)st_ was initiated during the hackathon [#WirVsVirus](https://www.bundesregierung.de/breg-de/themen/coronavirus/wir-vs-virus-1731968) that was initiated by the German government and took place between March 20 and March 22, 2020. You can read more about our idea in our [Devpost project](https://devpost.com/software/1_016_a_lokale_unternehmen_support_your_localho-r-st).
 
-You can access a live demo of our project at [http://support-for-localhorst.philenius.de](http://support-for-localhorst.philenius.de/). The backend is deployed at [http://sfl-backend.philenius.de](http://sfl-backend.philenius.de).
+You can access a live demo of our project at [https://support-for-localhorst.philenius.de](http://support-for-localhorst.philenius.de/). The backend is deployed at [https://support-for-localhorst.philenius.de/api/recommendations](https://support-for-localhorst.philenius.de/api/recommendations).
 
 This backend application provides access to our data that is stored in [Elasticsearch](https://www.elastic.co/elasticsearch/). We use Elasticsearch's full-text search and result scoring to display filtered results in our frontend. The backend implementation is based on [NodeJS](https://nodejs.org/en/) and uses the [official Node.js client for Elasticsearch](https://github.com/elastic/elasticsearch-js). The resulting app is dockerized so that it can run everywhere respectively on every cloud. The latest build in form of a Docker image is hosted on [Docker Hub](https://hub.docker.com/repository/docker/supportforlocalhorst/localhorst-backend).
 
