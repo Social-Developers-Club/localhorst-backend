@@ -52,21 +52,34 @@ docker build -t supportforlocalhorst/localhorst-backend .
 docker push supportforlocalhorst/localhorst-backend
 ```
 
-## Full Local Deployment of _Support For Localho(r)st_ Project
+## Full Deployment of _Support For Localho(r)st_ Project
+
+For deployment we use Docker Compose. We provide two different Docker Compose configuration files.
+
+1. `docker-compose-local-deployment.yml` for **local deployment**, e.g. for demo/testing purposes. Direct access to all applications is allowed.
+2. `docker-compose.yml` for deployment on a **remote deployment**, e.g. on a server. Direct access to all applications is prohibited.
+
+These configuration files define the deployment of our frontend, backend, and database. In addition, the Docker Compose configuration includes an NGINX reverse proxy which serves both applications, backend and frontend, at a unified endpoint on port 8080. You can access the Angular frontend single page application at [http://localhost:8080](http://localhost:8080). The NodeJS backend application runs at [http://localhost:8080/api/recommendations](http://localhost:8080/api/recommendations).
 
 ### Local Deployment
 
-You can use our _Docker Compose_ file for starting the whole application stack **locally** (including frontend, backend, and database):
+You can use our _Docker Compose_ file `docker-compose-local-deployment.yml` for starting the whole application stack **locally**:
 
 ```bash
 docker-compose -f docker-compose-local-deployment.yml up
 ```
 
-This configuration starts an additional NGINX reverse proxy which serves backend and frontend on localhost both on port 80. You can access the frontend Angular app at [http://localhost](http://localhost). The backend runs on [http://localhost/api/recommendations](http://localhost/api/recommendations). You can also access both applications directly through [http://localhost:8081](http://localhost:8081) (frontend) and [http://localhost:8080](http://localhost:8080) (backend). The Elasticsearch instance can be reached at [http://localhost:9200](http://localhost:9200).
+With this configuration, you can bypass NGINX to access all applications directly: [http://localhost:8081](http://localhost:8081) (frontend) and [http://localhost:8082](http://localhost:8082) (backend). The Elasticsearch instance can be reached at [http://localhost:9200](http://localhost:9200).
 
-### Server Deployment
+### Remote Deployment
 
+You can use our _Docker Compose_ file `docker-compose.yml` for starting the whole application stack on a **remote server**:
 
+```bash
+docker-compose -f docker-compose.yml up
+```
+
+With this configuration, direct access (=bypassing the NGINX) to frontend, backend, and Elasticsearch is prohibited. All services are hidden behind the NGINX.
 
 ## Related Repositories
 

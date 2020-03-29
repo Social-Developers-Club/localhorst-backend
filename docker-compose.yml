@@ -25,24 +25,24 @@ services:
     volumes:
       - data01:/usr/share/elasticsearch/data
     restart: unless-stopped
-    ports:
-      - 9200:9200
+    expose:
+      - 9200
     networks:
       - localhorst-network
 
   localhorst-frontend:
     image: supportforlocalhorst/localhorst-frontend
     restart: unless-stopped
-    ports:
-      - 8081:80
+    expose:
+      - 80
     networks:
       - localhorst-network
 
   localhorst-backend:
     image: supportforlocalhorst/localhorst-backend
     restart: unless-stopped
-    ports:
-      - 8082:8080
+    expose:
+      - 8080
     networks:
       - localhorst-network
 
@@ -51,4 +51,3 @@ volumes:
 
 networks:
   localhorst-network:
- 
