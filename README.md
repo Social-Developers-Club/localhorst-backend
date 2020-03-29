@@ -52,34 +52,21 @@ docker build -t supportforlocalhorst/localhorst-backend .
 docker push supportforlocalhorst/localhorst-backend
 ```
 
-## Local Deployment
+## Full Local Deployment of _Support For Localho(r)st_ Project
 
-* You can run the backend using Docker:
+### Local Deployment
 
-  ```bash
-  docker run \
-    -p 9200:9200 \
-    -e "discovery.type=single-node" \
-    --network host \
-    --name elasticsearch \
-    --rm docker.elastic.co/elasticsearch/elasticsearch:7.6.1
-  
-  docker run \
-    -p 8080:8080 \
-    -e ELASTICSEARCH_NODE="http://localhost:9200" \
-    --network host \
-    --rm supportforlocalhorst/localhorst-backend
-  ```
+You can use our _Docker Compose_ file for starting the whole application stack **locally** (including frontend, backend, and database):
 
-  The backend application can now be access at [http://localhost:8080](http://localhost:8080).
+```bash
+docker-compose -f docker-compose-local-deployment.yml up
+```
 
-* Alternatively, you can our Docker Compose file for starting the whole application stack (including frontend, backend, and database):
+This configuration starts an additional NGINX reverse proxy which serves backend and frontend on localhost both on port 80. You can access the frontend Angular app at [http://localhost](http://localhost). The backend runs on [http://localhost/api/recommendations](http://localhost/api/recommendations). You can also access both applications directly through [http://localhost:8081](http://localhost:8081) (frontend) and [http://localhost:8080](http://localhost:8080) (backend). The Elasticsearch instance can be reached at [http://localhost:9200](http://localhost:9200).
 
-  ```bash
-  docker-compose up
-  ```
+### Server Deployment
 
-  The frontend application can be access at [http://localhost:8081](http://localhost:8081). The backend runs on [http://localhost:8080](http://localhost:8080). Please note, that the frontend application was implemented to run on our remote server. Therefore, it connects per default to a backend running on our server at [http://sfl-backend.philenius.de](http://sfl-backend.philenius.de). If you want to start backend and frontend locally, then you need to adapt the code of the frontend so that it connects to your locally running backend. See the instructions at [localhorst-frontend](https://github.com/Social-Developers-Club/localhorst-frontend) for further details. This adaption requires a rebuild of the frontend application.
+
 
 ## Related Repositories
 
