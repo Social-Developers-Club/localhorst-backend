@@ -2,7 +2,7 @@
 version: "3.7"
 services:
 
-  nginx: 
+  localhorst-nginx: 
     image: nginx:1.17
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
