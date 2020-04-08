@@ -10,32 +10,21 @@ const elasticsearchIndex = process.env.ELASTICSEARCH_INDEX || 'recommendations';
 router.get('/', (req, res) => {
     const client = new Client({ node: elasticsearchNode });
 
-    const categories = [];
-    const industries = [];
-    const type = req.query.type;
+    const categories = parseQueryParamToArray(req.query.category);
+    const industries = parseQueryParamToArray(req.query.industry);
+    const types = parseQueryParamToArray(req.query.type);
     const text = req.query.text;
-
-    if (Array.isArray(req.query.category)) {
-        categories.push(...req.query.category);
-    } else if (req.query.category !== undefined) {
-        categories.push(req.query.category);
-    }
-
-    if (Array.isArray(req.query.industry)) {
-        industries.push(...req.query.industry);
-    } else if (req.query.industry !== undefined) {
-        industries.push(req.query.industry);
-    }
 
     let searchQuery;
 
     // match all documents when no query params given; else build complex query
-    if ((categories.length === 0) && (industries.length === 0) && !type && !text) {
+    if ((categories.length === 0) && (industries.length === 0) && (types.length === 0) && !text) {
         searchQuery = {
             "query": {
                 "match_all": {}
             }
         };
+        console.log('match all query');
     } else {
 
         searchQuery = {
@@ -62,12 +51,10 @@ router.get('/', (req, res) => {
             });
         }
 
-        if (type) {
+        if (types.length > 0) {
             searchQuery.query.bool.must.push({
-                "term": {
-                    "type": {
-                        "value": type
-                    }
+                "terms": {
+                    "type": types
                 }
             });
         }
@@ -116,5 +103,15 @@ router.get('/', (req, res) => {
 
 
 });
+
+function parseQueryParamToArray(param) {
+    const values = [];
+    if (Array.isArray(param)) {
+        param.filter(e => e.length > 0).forEach(e => values.push(e));
+    } else if ((param !== undefined) && (param.length > 0)) {
+        values.push(param);
+    }
+    return values;
+}
 
 module.exports = router;
