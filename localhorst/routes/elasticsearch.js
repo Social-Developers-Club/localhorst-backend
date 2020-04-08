@@ -10,20 +10,32 @@ const elasticsearchIndex = process.env.ELASTICSEARCH_INDEX || 'recommendations';
 router.get('/', (req, res) => {
     const client = new Client({ node: elasticsearchNode });
 
-    const category = req.query.category;
-    const industry = req.query.industry;
+    const categories = [];
+    const industries = [];
     const type = req.query.type;
     const text = req.query.text;
+
+    if (Array.isArray(req.query.category)) {
+        categories.push(...req.query.category);
+    } else if (req.query.category !== undefined) {
+        categories.push(req.query.category);
+    }
+
+    if (Array.isArray(req.query.industry)) {
+        industries.push(...req.query.industry);
+    } else if (req.query.industry !== undefined) {
+        industries.push(req.query.industry);
+    }
 
     let searchQuery;
 
     // match all documents when no query params given; else build complex query
-    if (!category && !industry && !type && !text) {
+    if ((categories.length === 0) && (industries.length === 0) && !type && !text) {
         searchQuery = {
             "query": {
                 "match_all": {}
             }
-        }
+        };
     } else {
 
         searchQuery = {
@@ -34,24 +46,20 @@ router.get('/', (req, res) => {
             }
         };
 
-        if (category) {
+        if (categories.length > 0) {
             searchQuery.query.bool.must.push({
-                "term": {
-                    "category": {
-                        "value": category
-                    }
+                "terms": {
+                    "category": categories
                 }
-            })
+            });
         }
 
-        if (industry) {
+        if (industries.length > 0) {
             searchQuery.query.bool.must.push({
-                "term": {
-                    "industry": {
-                        "value": industry
-                    }
+                "terms": {
+                    "industry": industries
                 }
-            })
+            });
         }
 
         if (type) {
@@ -61,15 +69,27 @@ router.get('/', (req, res) => {
                         "value": type
                     }
                 }
-            })
+            });
         }
 
+        // Match given text in fields 'title' or 'description'
         if (text) {
             searchQuery.query.bool.must.push({
-                "match": {
-                    "description": text
+                "bool": {
+                    "should": [
+                        {
+                            "match": {
+                                "title": text
+                            }
+                        },
+                        {
+                            "match": {
+                                "description": text
+                            }
+                        }
+                    ]
                 }
-            })
+            });
         }
 
     }
@@ -91,7 +111,7 @@ router.get('/', (req, res) => {
             res.json(hits);
         }).catch((err) => {
             console.error('Failed to query Elasticsearch', JSON.stringify(err));
-            res.status(503).send('Failed to query Elasticsearch');
+            res.status(503).send('Failed to query database');
         });
 
 
